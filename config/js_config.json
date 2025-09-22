@@ -1,0 +1,40 @@
+{
+  "name": "JavaScript",
+  "type": "regex",
+  "extensions": [".js", ".mjs", ".cjs"],
+  "keywords": {
+    "control": ["if", "else", "for", "while", "switch", "case", "break", "continue", "return", "throw"],
+    "definition": ["function", "class", "let", "const", "var"],
+    "import": ["import", "export", "from", "as"],
+    "exception": ["try", "catch", "finally", "throw"],
+    "logic": ["&&", "||", "!", "in", "instanceof"],
+    "constants": ["true", "false", "null", "undefined"],
+    "builtin": ["console", "window", "document", "Array", "Object", "JSON", "Math"]
+  },
+  "patterns": [
+    {"tag":"comment","regex":"//.*?$","flags":"m"},
+    {"tag":"comment","regex":"/\\*.*?\\*/","flags":"s"},
+    {"tag":"string","regex":"`(?:\\\\.|[^`\\\\])*`","flags":"s"},
+    {"tag":"string","regex":"\"(\\\\.|[^\"\\\\])*\""},
+    {"tag":"string","regex":"'(\\\\.|[^'\\\\])*'"},
+    {"tag":"class_name","regex":"\\bclass\\s+([A-Za-z_]\\w*)"},
+    {"tag":"func_name","regex":"\\bfunction\\s+([A-Za-z_]\\w*)"},
+    {"tag":"func_name","regex":"\\b([A-Za-z_]\\w*)(?=\\s*\\()"},
+    {"tag":"digits","regex":"\\b\\d+(?:\\.\\d+)?\\b"}
+  ],
+  "theme": {
+    "control": "#569CD6",
+    "definition": "#4EC9B0",
+    "import": "#C586C0",
+    "exception": "#FF6E6E",
+    "logic": "#D4D4D4",
+    "constants": "#B5CEA8",
+    "builtin": "#C586C0",
+    "class_name": "#B8D7A3",
+    "func_name": "#DCDCAA",
+    "var_name": "#9CDCFE",
+    "string": "#F29E74",
+    "comment": "#6A9955",
+    "module": "#A0C4FF"
+  }
+}

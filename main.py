@@ -648,7 +648,7 @@ class ConfigEditor(tk.Tk):
         if self.search_win:
             self.search_win.lift(); return
         self.search_win = tk.Toplevel(self)
-        self.search_win.title("Find"); self.search_win.transient(self); self.search_win.resizable(False, False)
+        self.search_win.title("Find"); self.search_win.transient(self); self.search_win.resizable(False, False); self.search_win.iconbitmap("assets\\DamEdit.ico")
         self.search_win.protocol("WM_DELETE_WINDOW", self._close_find)
         frame = ttk.Frame(self.search_win, style="SideBar.TFrame")
         frame.pack(fill="both", expand=True, padx=6, pady=6)
@@ -733,4 +733,5 @@ def main():
     app.mainloop()
 
 if __name__ == "__main__":
+
     main()

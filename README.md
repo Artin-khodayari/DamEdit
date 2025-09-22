@@ -122,4 +122,4 @@ You can contact me and report bugs via [Gmail](mailto:ArtinKhodayari2010@gmail.c
 
 ## 📄 License
 
-This project is licensed under the [MIT License](https://githu.com/Artin-khodayari/DamEdit/LICENSE).
+This project is licensed under the [MIT License](https://github.com/Artin-khodayari/DamEdit/blob/main/LICENSE).

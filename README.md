@@ -1,92 +1,96 @@
-
 # 🖍 DamEdit - Python Code Editor
 
 ![DamEdit GUI](assets/DamEdit.png)
 
-**DamEdit** or actull **Damavand Code Editor** is a fun, lightweight Python code editor built with `tkinter`.  
-It comes with **syntax highlighting**, **line numbering**, a **file manager sidebar**, and a tiny **search system**, providing a minimal yet functional environment for Python development.
+**DamEdit** (or actull **Damavand Code Editor**) is a lightweight, config-driven Python code editor built with **Tkinter**. It offers **syntax highlighting**, **line numbers**, a **file browser sidebar**, customizable **themes**, and a built-in **search dialog**, providing a minimal yet functional environment for Python development.
 
 ---
 
 ## 🌟 Features
 
-- 🎨 Syntax highlighting for:
-  - Python keywords (control, definition, imports, exceptions, etc.)
-  - Strings, comments, numbers, variables, classes, and functions
-- 📑 Line numbering with automatic updates
-- 📂 File explorer sidebar with quick open support
-- 💾 File operations:
-  - Open file (`Ctrl+O`)
-  - Save file (`Ctrl+S`)
-  - Save As (`Ctrl+Shift+S`)
-- 🔍 Find window with:
-  - Search next (`Enter`)
-  - Search previous (`Shift+Enter`)
-  - Close (`Esc`)
-- ⚙️ Editor customization:
-  - Font size increase (`Ctrl+"+"`)
-  - Font size decrease (`Ctrl+"-"`)
-- 🚀 Smooth scrolling, active-line highlighting, and responsive layout
-- 🖼 Modern dark theme with styled buttons, menus, and scrollbars
+- 🎨 **Syntax Highlighting**
+  - Built-in Python support
+  - Load custom language configs (`configs/*.json`)
+  - Regex-based or keyword-based highlighting
+- 🎨 **Themes**
+  - Built-in dark theme
+  - Load custom theme JSONs dynamically
+  - Reset to default theme
+- 📂 **File Management**
+  - Open, Save, Save As
+  - File sidebar for browsing current directory
+- 📝 **Editor Utilities**
+  - Line numbers with automatic updates
+  - Highlight current line
+  - Increment/decrement font size
+- 🔍 **Search**
+  - Find next/previous in the editor
+  - Highlight search matches
+- 🖥️ **UI**
+  - Toolbar with file, programming language, theme, and find options
+  - Scrollbars synchronized with text area and line numbers
+  - Cross-platform (Windows, Linux)
 
 ---
 
 ## 📦 Installation
 
-1. Clone this repository:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/Artin-khodayari/DamEdit.git
 cd DamEdit
 ```
 
-2. Run the editor:
+2. Ensure Python 3.10+ is installed.
+
+3. Run the editor:
 
 ```bash
 python main.py
 ```
-
----
-
-## ⚙️ Requirements
-
-- Python **3.10+**
-- `tkinter` (comes with Python)
-- No extra dependencies required 🎉
 
 ---
 
 ## 🖥️ Usage
 
-1. Launch the editor:
+- **Open a file:** `File → Open` or `Ctrl+O`
+- **Save a file:** `File → Save` or `Ctrl+S`
+- **Save As:** `File → Save As` or `Ctrl+Shift+S`
+- **Change language:** `Language → Load language JSON...`
+- **Change theme:** `Theme → Load Theme JSON...`
+- **Find text:** `Ctrl+F` or `Find button`
+- **Increase/decrease font size:** `Ctrl + / Ctrl -`
 
-```bash
-python main.py
-```
-
-2. Open or create a file:
-   - 📂 File → Open (Ctrl+O)
-   - 💾 File → Save (Ctrl+S)
-   - 📁 File → Save As (Ctrl+Shift+S)
-
-3. Explore files via the **Files** button in the toolbar.  
-4. Use the **Find** tool (`Ctrl+F`) to search text in your code.  
-5. Adjust font size with **Config → Font + / -** or keyboard shortcuts.  
+The editor automatically detects language config based on file extension. If no config exists, it defaults to Python highlighting for `.py` files.
 
 ---
 
-## 📝 Example
+## ⚙️ Configs & Themes
 
-Here’s how Python code looks inside DamEdit:
+- Place **language configs** in the `configs/` folder (JSON format).
 
-```python
-def hello_world():
-    print("Hello, DamEdit!")
+- Language JSON can define:
+  - `type`: `"python"` or `"regex"`
+  - `keywords`: dictionary of tag → word list
+  - `patterns`: regex-based highlighting rules
+  - `theme` or `colors`: optional color overrides
+  - `extensions`: file extensions it applies to
+
+- **Themes** are JSON files mapping editor tags to hex colors:
+
+```json
+{
+  "editor_bg": "#1C1B21",
+  "editor_fg": "#D8D8D8",
+  "control": "#569CD6",
+  "string": "#F29E74"
+}
 ```
 
 ---
 
-## 🎨 GUI
+## 🖼 GUI
 
 - Minimal dark-themed design
 - Sidebar for file navigation
@@ -98,8 +102,7 @@ def hello_world():
 
 ## 🤝 Contributing
 
-Contributions are welcome!  
-To contribute:
+Contributions are welcome!
 
 1. Fork this repository
 2. Create a feature branch (`git checkout -b feature-name`)
@@ -112,12 +115,11 @@ To contribute:
 
 ## 🧑‍💻 About the Developer
 
-This project is made by [Artin khodayari](https://github.com/Artin-khodayari).
-
+This project is made by [Artin Khodayari](https://github.com/Artin-khodayari).  
 You can contact me and report bugs via [Gmail](mailto:ArtinKhodayari2010@gmail.com).
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://githu.com/Artin-khodayari/DamEdit/LICENSE).

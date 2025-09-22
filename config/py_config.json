@@ -1,0 +1,105 @@
+{
+  "name": "Python (Complete)",
+  "type": "python",
+  "extensions": [
+    ".py"
+  ],
+  "keywords": {
+    "control": [
+      "if",
+      "else",
+      "elif",
+      "for",
+      "while",
+      "break",
+      "continue",
+      "return",
+      "yield",
+      "pass"
+    ],
+    "definition": [
+      "def",
+      "class",
+      "lambda"
+    ],
+    "import": [
+      "import",
+      "from",
+      "as"
+    ],
+    "exception": [
+      "try",
+      "except",
+      "finally",
+      "raise",
+      "assert"
+    ],
+    "logic": [
+      "and",
+      "or",
+      "not",
+      "in",
+      "is"
+    ],
+    "constants": [
+      "True",
+      "False",
+      "None"
+    ],
+    "builtin": [
+      "print",
+      "len",
+      "range",
+      "input",
+      "open",
+      "type",
+      "int",
+      "str",
+      "list",
+      "dict",
+      "tuple",
+      "set"
+    ],
+    "del_stmt": [
+      "del"
+    ],
+    "async": [
+      "async",
+      "await"
+    ],
+    "with_stmt": [
+      "with"
+    ]
+  },
+  "patterns": [
+    {
+      "tag": "comment",
+      "regex": "#.*?$"
+    },
+    {
+      "tag": "string",
+      "regex": "(\"(\\\\.|[^\"\\\\])*\"|'(\\\\.|[^'\\\\])*')"
+    }
+  ],
+  "theme": {
+    "control": "#569CD6",
+    "definition": "#4EC9B0",
+    "import": "#4EC9B0",
+    "exception": "#FF6E6E",
+    "logic": "#569CD6",
+    "constants": "#B5CEA8",
+    "builtin": "#C586C0",
+    "class_name": "#B8D7A3",
+    "func_name": "#DCDCAA",
+    "var_name": "#9CDCFE",
+    "string": "#F29E74",
+    "comment": "#6A9955",
+    "module": "#A0C4FF",
+    "self": "#E7C547",
+    "self_attr": "#9CDCFE",
+    "del_stmt": "#FF6E6E",
+    "async": "#569CD6",
+    "with_stmt": "#569CD6",
+    "fstring_prefix": "#E7C547"
+  }
+}
